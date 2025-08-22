@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Usuario {
     Scanner scanner = new Scanner(System.in);
 
-    // Atributos
+
     private String idUsuario;
     private String nome;
     private String cpf;
@@ -13,7 +13,7 @@ public class Usuario {
     private String dataCadastro;
     private String dataAtualizacao;
 
-    // Construtor
+
     public Usuario(String idUsuario, String nome, String cpf, String email, String senhaHash, String status, String dataCadastro, String dataAtualizacao) {
         this.idUsuario = idUsuario;
         this.nome = nome;
@@ -25,7 +25,7 @@ public class Usuario {
         this.dataAtualizacao = dataAtualizacao;
     }
 
-    // Métodos (comportamentos)
+
     public void visualizarPerfil() {
         System.out.println("### Perfil do Usuário ###");
         System.out.println("Nome: " + this.nome);
