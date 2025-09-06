@@ -58,5 +58,24 @@ public class Main {
         minhaNotificacao.enviarSMS("Seu saldo foi atualizado.");
 
         System.out.println("\n### Teste do Sistema Concluído ###");
+        System.out.println("\n\n--- Testando a Herança com as Transações ---");
+
+        System.out.println("\n--- Teste Transação PIX ---");
+        TransacaoPix pix = new TransacaoPix("pix001", 150.0, "2025-09-06", "chave.aleatoria@banco.com");
+        pix.processar();
+        pix.exibirValor();
+
+        System.out.println("\n--- Teste Transação Cartão ---");
+        TransacaoCartao cartao = new TransacaoCartao("cartao002", 89.90, "2025-09-06", "Teste da Silva", "12/29", 12345678, "Mastercard");
+        cartao.processar();
+        cartao.exibirValor();
+
+        System.out.println("\n--- Teste Transação TED ---");
+        TransacaoTed ted = new TransacaoTed("ted003", 2500.0, "2025-09-05", "Empresa Exemplo LTDA", "Banco Fintech", 987654);
+        ted.processar();
+        ted.exibirValor();
+
+        System.out.println("\n\n### Teste do Sistema Concluído ###");
+
     }
 }
